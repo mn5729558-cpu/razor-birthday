@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Razan</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
+body{background:#0f0505;color:#fff;overflow:hidden}
+.page{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;padding:24px;overflow-y:auto;background:radial-gradient(circle at 50% 30%, #4a1a1a, #0f0505);z-index:10}
+.page.active{display:flex;animation:fade .8s}
+@keyframes fade{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+.gift{font-size:120px;animation:float 2.5s infinite ease-in-out;cursor:pointer}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+.btn{background:#ff4d6d;border:none;padding:14px 38px;border-radius:30px;color:#fff;font-weight:900;cursor:pointer;box-shadow:0 0 25px #ff4d6d55;margin-top:20px;font-size:15px}
+.card{max-width:380px;width:100%;background:linear-gradient(180deg,#2a1515,#1a0e0e);border-radius:24px;padding:26px;border:1px solid #ffffff12;text-align:center}
+.title{font-weight:900;font-size:28px;line-height:1.2}
+.sub{opacity:.6;font-size:12px;margin-top:8px;letter-spacing:1px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0;width:100%;max-width:380px}
+.grid div{background:#1f1010;border-radius:16px;padding:14px 5px;text-align:center;border:1px solid #ffffff0f}
+.grid span{display:block;font-size:20px;font-weight:900;color:#ff8fa3}
+.letter{text-align:right;line-height:2;font-size:14px;max-width:380px;background:#1a0e0e;border-radius:20px;padding:22px;border:1px solid #ffffff0f;max-height:65vh;overflow-y:auto}
+.letter p{margin-bottom:14px}
+.box{background:#1e1212;border-radius:18px;padding:18px;margin:10px 0;width:100%;max-width:380px;cursor:pointer;border:1px solid #ffffff0f;transition:.3s}
+.box.active{background:#ff4d6d}
+.box .hide{display:none;margin-top:10px;color:#ffe4e9;line-height:1.9;font-size:13px}
+.box.active .hide{display:block}
+.hearts{position:fixed;inset:0;pointer-events:none;z-index:1}
+.heart{position:absolute;animation:up 5s linear infinite;color:#ff4d6d;opacity:.5}
+@keyframes up{0%{transform:translateY(110vh) scale(0)}100%{transform:translateY(-10vh) scale(1.2)}}
+.dots{display:flex;gap:8px;margin-top:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:#ffffff22}
+.dot.active{background:#ff4d6d;box-shadow:0 0 10px #ff4d6d}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts"></div>
+
+<!-- PAGE 1 - ENTRY -->
+<div class="page active" id="p1">
+  <div style="font-size:50px">🎂</div>
+  <h1 style="font-weight:900;font-size:36px;margin-top:10px;letter-spacing:1px">𝐻𝐼𝑃𝑃𝑌 𝐵𝐼𝑅𝑇𝐻𝐷𝐴𝑌</h1>
+  <h1 style="font-weight:900;font-size:42px;color:#ff8fa3">𝑦𝑎3𝑂𝑁𝑌𝑌</h1>
+  <p style="opacity:.6;margin-top:10px">10 . 10 . 2010 — 16 سنة يا ملكة قلبي</p>
+  <div class="gift" onclick="go(2)" style="margin-top:18px">🎁</div>
+  <p style="opacity:.5;font-size:12px;margin-top:10px">دوسي علي ام الهديه</p>
+  <button class="btn" onclick="go(2)">افتحي يا جموسه</button>
+  <div class="dots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+</div>
+
+<!-- PAGE 2 - LETTER REAL -->
+<div class="page" id="p2">
+  <div class="card">
+    <div style="font-size:12px;opacity:.5;letter-spacing:3px">MY LETTER TO YOU</div>
+    <h2 style="font-weight:900;margin:12px 0">حيوانه😂</h2>
+    <p style="font-size:13px;opacity:.7;line-height:1.8">من أول يوم اتكلمنا فيه 11 / 1 / 2023 وانتي غيرتي حياتي</p>
+  </div>
+  <div class="letter" style="margin-top:14px">
+    <p>أنا مش مصدق إن في حد زيك لسه موجود في الدنيا دي كلها وجودك بالنسبالي مش عادي خالص دي نعمة كبيرة أوي بحمد ربنا عليها كل يوم وكل لحظة ووجودك في حياتي فرق معايا في كل حاجة فرق في طاقتي في قلبي في تفكيري بقيت أشوف الدنيا بلونك بصوتك بحضورك بقيت أعيش مش مجرد أتنفس بقيت أضحك من قلبي بجد وده كله بسببك انتي بس.</p>
+    <p>وجودك خلاني أحس إني مهم إني محبوب إني مش لوحدي وانتي اللي دايما بتكوني أول حد بيحس بيا من قبل ما اتكلم اللي بتفهمي سكوتي وتطبطبي عليا بكلمة وبحركة وباهتمام حقيقي مش مزيف وجودك هو النور اللي دخل قلبي من غير استئذان ومسح كل ظلام كنت شايفه قبل كده.</p>
+    <p>شكرا انك في حياتي بجد غيرتي حياتي مليون درجة شكرا على كل حاجة بتعمليها معايا شكرا على حبك شكرا على وجودك.</p>
+    <p style="font-weight:900;color:#ff8fa3">كل سنة و احنا سوا ينور عيني و ميحرمنيش منك ابدااااااااا.</p>
+  </div>
+  <button class="btn" onclick="go(3)">كملي يا حبيبتي ←</button>
+  <div class="dots"><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+</div>
+
+<!-- PAGE 3 - COUNTER -->
+<div class="page" id="p3">
+  <h2 style="font-weight:900">من اول م اتكلمناااااا</h2>
+  <p style="opacity:.6;font-size:12px;margin-top:6px">11 يناير 2023 — لحد النهارده</p>
+  <div class="grid">
+    <div><span id="y">0</span><small style="opacity:.5">سنة</small></div>
+    <div><span id="mo">0</span><small style="opacity:.5">شهر</small></div>
+    <div><span id="d">0</span><small style="opacity:.5">يوم</small></div>
+    <div><span id="h">0</span><small style="opacity:.5">ساعة</small></div>
+    <div><span id="mi">0</span><small style="opacity:.5">دقيقة</small></div>
+    <div><span id="s">0</span><small style="opacity:.5">ثانية</small></div>
+  </div>
+  <div class="card" style="margin-top:10px">
+    <div style="font-weight:900">🎂 10 اكتوبر 2010</div>
+    <div style="font-size:13px;opacity:.7;margin-top:6px">كبرتي وبقيتي 16 سنه ي جموسه </div>
+  </div>
+  <button class="btn" onclick="go(4)">اديني ف الرومانسي بقا 😂←</button>
+  <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div></div>
+</div>
+
+<!-- PAGE 4 - PROMISES -->
+<div class="page" id="p4">
+  <h2 style="font-weight:900">وشوفي الكلام الرومانسييييييي</h2>
+  <div class="box" onclick="this.classList.toggle('active')">🤞 هفضل سندك وضهرك ي نن عيوني<div class="hide">مستحيل اي حاجة تخلينا نبعد او نتخانق اسبوع او ايام احنا الاتنين بنكمل بعض اكتر اتنين لايقين على بعض</div></div>
+  <div class="box" onclick="this.classList.toggle('active')">🛡️ هكون أمانك و الحضن اللي مفتوحلك طول العمر<div class="hide">جايبين المشاكل لبعض من كتر البص بس حقيقي بحب بصتك ليا قوي وبحب غيرتك عليا</div></div>
+  <div class="box" onclick="this.classList.toggle('active')">♾️ كل سنة وانتي معاياو كل سنه وانتي بتكبري معايا يحياتي<div class="hide">كل سنة وانتي احسن واحدة عيني تشوفها كل سنة واحنا مع بعض وكل سنة وانتي بتكبري وانا بحبك اكتر</div></div>
+  <div class="box" onclick="this.classList.toggle('active')">💖 عوض ربنا ليا و هديه من ربنا و اجمل هديهههه<div class="hide">ربنا خلق حب الكون كله جوايا ليكي انتي بس وكأنك عوض ربنا ليا وفعلا ربنا عوضني بيكي</div></div>
+  <button class="btn" onclick="go(5)">كملي ي حيوااا ...←</button>
+  <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div></div>
+</div>
+
+<!-- PAGE 5 - FINAL -->
+<div class="page" id="p5">
+  <div style="font-size:70px">👑</div>
+  <h1 style="font-weight:900;font-size:32px;margin-top:10px">بنوتيي</h1>
+  <h2 style="color:#ff8fa3;font-weight:900">16 سنه يبنت الوسخه</h2>
+  <div class="card" style="margin-top:18px">
+    <p style="line-height:1.9;font-size:14px">احسن و اجمل من يتم ال 16 ي نن عيوني<br>يخيكي ليا يعيون حبيبك<br>غاليه عليا كده كده<br><br><span style="color:#ff8fa3;font-weight:900">بعشقك ي رزاااااا</span></p>
+    <div style="margin-top:16px;opacity:.5;font-size:11px;letter-spacing:2px">10.10.2010 — 11.01.2023 FOR EVER</div>
+  </div>
+  <div style="margin-top:18px;display:flex;gap:10px">
+    <button class="btn" style="background:#ffffff15;box-shadow:none" onclick="go(1)">بس كفايه كه انتي مش نانسي🔄</button>
+  </div>
+  <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div></div>
+</div>
+
+<script>
+function go(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('p'+n).classList.add('active')}
+const startDate=new Date("2023-01-11T00:00:00");
+setInterval(()=>{
+  let s=Math.floor((new Date()-startDate)/1000);
+  document.getElementById('s').innerText=s%60;
+  document.getElementById('mi').innerText=Math.floor(s/60)%60;
+  document.getElementById('h').innerText=Math.floor(s/3600)%24;
+  document.getElementById('d').innerText=Math.floor(s/86400)%30;
+  document.getElementById('mo').innerText=Math.floor(s/2628000)%12;
+  document.getElementById('y').innerText=Math.floor(s/31536000);
+},1000);
+setInterval(()=>{
+  let h=document.createElement('div');h.className='heart';h.innerText='❤';h.style.left=Math.random()*100+'vw';h.style.fontSize=(12+Math.random()*18)+'px';document.getElementById('hearts').appendChild(h);setTimeout(()=>h.remove(),5000)
+},300)
+</script>
+</body>
+</html>
